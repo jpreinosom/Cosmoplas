@@ -17,3 +17,11 @@ rule "Row 2 RuleFirma"
 	then
 		f1.setValidacion( false );
 end
+//from row number: 1
+rule "Row 3 RuleFirma"
+	dialect "mvel"
+	when
+		f1 : Firma( idBodega == 1 , idMovimiento == 1 , fechaMovimiento != fechaDespacho )
+	then
+		f1.setValidacion( false );
+end
