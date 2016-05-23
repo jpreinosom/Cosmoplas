@@ -13,7 +13,7 @@ end
 rule "Row 2 RuleFirma"
 	dialect "mvel"
 	when
-		f1 : Firma( idBodega == 2 , idMovimiento == 1 , fechaMovimiento == fechaDespacho)
+		f1 : Firma( idBodega == 2 , idMovimiento == 1 , fechaMovimiento == fechaDespacho )
 	then
 		f1.setValidacion( false );
 end
