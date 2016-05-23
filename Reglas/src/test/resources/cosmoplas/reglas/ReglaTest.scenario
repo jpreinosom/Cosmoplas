@@ -1,13 +1,56 @@
 <scenario>
-  <name>ReglaTest</name>
+  <name>ReglaTest.scenario</name>
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
-  <fixtures/>
+  <fixtures>
+    <fact-data>
+      <type>Firma</type>
+      <fieldData>
+        <field-data>
+          <name>fechaMovimiento</name>
+          <value>23-May-2016</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>fechaDespacho</name>
+          <value>23-May-2016</value>
+          <nature>1</nature>
+        </field-data>
+        <field-data>
+          <name>idBodega</name>
+          <value>1</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>idMovimiento</name>
+          <value>1</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>f</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace/>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>validacion</fieldName>
+          <expected>true</expected>
+          <operator>==</operator>
+          <nature>0</nature>
+        </expect-field>
+      </fieldValues>
+      <name>f</name>
+      <anonymous>false</anonymous>
+    </expect-fact>
+  </fixtures>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>cosmoplas.reglas</packageName>
   <imports>
     <imports/>
   </imports>
-  <ksessions/>
+  <ksessions>
+    <string>defaultKieSession</string>
+  </ksessions>
 </scenario>
