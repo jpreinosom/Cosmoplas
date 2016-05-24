@@ -18,8 +18,11 @@ public class Firma implements java.io.Serializable
    @org.kie.api.definition.type.Label("validacion")
    private java.lang.Boolean validacion;
 
-   @org.kie.api.definition.type.Label(value = "fechaDespacho")
+   @org.kie.api.definition.type.Label("fechaDespacho")
    private java.util.Date fechaDespacho;
+
+   @org.kie.api.definition.type.Label(value = "mensaje")
+   private java.lang.String mensaje;
 
    public Firma()
    {
@@ -75,15 +78,26 @@ public class Firma implements java.io.Serializable
       this.fechaDespacho = fechaDespacho;
    }
 
+   public java.lang.String getMensaje()
+   {
+      return this.mensaje;
+   }
+
+   public void setMensaje(java.lang.String mensaje)
+   {
+      this.mensaje = mensaje;
+   }
+
    public Firma(java.lang.Integer idMovimiento, java.lang.Integer idBodega,
          java.util.Date fechaMovimiento, java.lang.Boolean validacion,
-         java.util.Date fechaDespacho)
+         java.util.Date fechaDespacho, java.lang.String mensaje)
    {
       this.idMovimiento = idMovimiento;
       this.idBodega = idBodega;
       this.fechaMovimiento = fechaMovimiento;
       this.validacion = validacion;
       this.fechaDespacho = fechaDespacho;
+      this.mensaje = mensaje;
    }
 
 }
