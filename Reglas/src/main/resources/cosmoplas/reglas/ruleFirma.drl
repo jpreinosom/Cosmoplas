@@ -2,6 +2,7 @@ package cosmoplas.reglas;
 
 //from row number: 1
 rule "Row 1 RuleFirma"
+    ruleflow-group "firma"
 	dialect "mvel"
 	when
 		f1 : Firma(fechaMovimiento == fechaDespacho )
@@ -12,6 +13,7 @@ end
 //from row number: 2
 rule "Row 2 RuleFirma"
 	dialect "mvel"
+	ruleflow-group "firma"
 	when
 		f1 : Firma( fechaMovimiento != fechaDespacho )
 	then
